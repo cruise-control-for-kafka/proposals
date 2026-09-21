@@ -29,7 +29,7 @@ These target the changes required to eliminate known CVEs, stabilize CI, and cle
 Broader improvements to the codebase, APIs, and feature set, including the Java package rename from `com.linkedin` to `io.cruisecontrol` and Maven Central publication are deferred to subsequent releases.
 
 - **Upgrade to Kafka 4.3**: Upgrade Cruise Control to Kafka 4.3 to ensure compatibility with the latest Kafka version and resolve outstanding Kafka-related CVEs.
-  There is already an [open pull request](https://github.com/cruise-control-for-kafka/cruise-control/pull/2342).
+  This work has already been [merged](https://github.com/cruise-control-for-kafka/cruise-control/pull/2342).
 
 - **Upgrade to Jetty 12**: Migrate from pre-v12 Jetty to Jetty 12 because earlier versions are end-of-life and no longer receive security patches.
   There is already an [open pull request](https://github.com/cruise-control-for-kafka/cruise-control/pull/2307).
@@ -42,20 +42,21 @@ Broader improvements to the codebase, APIs, and feature set, including the Java 
   This may involve adding dependency constraints or forcing specific versions to ensure CVE-affected transitive dependencies are fully replaced.
 
 - **Fix known flaky tests**: Assess known flaky tests and fix the ones deemed to be most impactful.
-  There is already an [open pull request](https://github.com/cruise-control-for-kafka/cruise-control/pull/2338) that addresses known unstable Executor tests that intermittently fail and disrupt CI reliability for other pull requests.
+  There has already been a [PR merged](https://github.com/cruise-control-for-kafka/cruise-control/pull/2338) that addresses known unstable Executor tests that intermittently fail and disrupt CI reliability for other pull requests.
+  Additional unstable tests are currently being identified and addressed.
   Flaky tests block the merge of CVE-fixing pull requests and erode confidence in the test suite so stabilizing the most impactful ones is a prerequisite for a reliable release.
 
-The first release under the Linux Foundation will be versioned `3.0.5`, continuing from LinkedIn's final release of `3.0.4`. 
-This preserves version continuity across the transition and avoids ambiguity about which release is newer. 
-A micro version bump is also the natural choice given the scope of changes in this release.
+The first release under the Linux Foundation will be versioned `3.1.0`, continuing from LinkedIn's final release of `3.0.4`. 
+This preserves version continuity across the transition and avoids ambiguity about which release is newer.
+It also distinguishes the Linux Foundation release line from LinkedIn's internal release line of `3.0.x`.
 
-The target release date is October 2, 2026.
+The target release date is in the first half of October.
 
 ## Compatibility
 
 ### Kafka compatibility
 
-The Kafka 4.3.0 upgrade establishes the baseline Kafka version for the first release.
+The Kafka 4.3 upgrade establishes the baseline Kafka version for the first release.
 Older Kafka client versions are expected to remain compatible at runtime but multi-version build and test coverage is deferred to a future release.
 
 ### Jetty compatibility
