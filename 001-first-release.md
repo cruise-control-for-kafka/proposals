@@ -32,7 +32,7 @@ Broader improvements to the codebase, APIs, and feature set, including the Java 
   This work has already been [merged](https://github.com/cruise-control-for-kafka/cruise-control/pull/2342).
 
 - **Upgrade to Jetty 12**: Migrate from pre-v12 Jetty to Jetty 12 because earlier versions are end-of-life and no longer receive security patches.
-  There is already an [open pull request](https://github.com/cruise-control-for-kafka/cruise-control/pull/2307).
+  This work has already been [merged](https://github.com/cruise-control-for-kafka/cruise-control/pull/2307).
 
 - **Remove duplicate and conflicting dependency declarations**: Audit the Gradle build configuration to eliminate redundant version pins that are silently overridden by transitive dependencies.
   Introduce a version BOM (`platform()`/`enforcedPlatform()`) to centralize dependency version management across subprojects.
