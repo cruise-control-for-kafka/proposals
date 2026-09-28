@@ -10,4 +10,5 @@ Review and acceptance of proposals follow the "Consensus Vote" rules defined in 
 
 | #  | Title                                                                 |
 |:--:|:----------------------------------------------------------------------|
+| 1  | [First release under the Linux Foundation](./001-first-release.md)    |
 
