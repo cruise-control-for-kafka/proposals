@@ -10,5 +10,6 @@ Review and acceptance of proposals follow the "Consensus Vote" rules defined in 
 
 | #  | Title                                                                 |
 |:--:|:----------------------------------------------------------------------|
+| 2  | [Cruise Control Roadmap (2026)](./002-roadmap-2026.md)                |
 | 1  | [First release under the Linux Foundation](./001-first-release.md)    |
 
